@@ -1,0 +1,2 @@
+library(quantmod)
+getSymbols("^TWII")

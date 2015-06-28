@@ -2,7 +2,7 @@ library(httr)
 library(XML)
 library(CSS)
 library(stringr)
-# 台北市
+
 wantPageUrl <- GET('http://www.etwarm.com.tw/object_list.php?city=%E5%8F%B0%E5%8C%97%E5%B8%82')
 wantPageUrl <- htmlParse(content(wantPageUrl, 'text', encoding='utf8'))
 wantPage <- xpathApply(wantPageUrl, '//*[@id="select_2"]/table/tr/td[3]', xmlValue)[[1]]
